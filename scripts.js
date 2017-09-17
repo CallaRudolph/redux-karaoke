@@ -52,6 +52,14 @@ const { createStore } = Redux;
 const store = createStore(reducer);
 console.log(store.getState());
 
+const render = () => {
+  document.getElementById('words').innerHTML = store.getState().currentPhrase;
+}
+
+window.onload = function() {
+  render();
+}
+
 const userClick = () => {
   console.log('click');
 }
