@@ -65,3 +65,5 @@ const userClick = () => {
   store.dispatch({ type: 'NEXT_LYRIC'});
   console.log(store.getState());
 }
+
+store.subscribe(render);
