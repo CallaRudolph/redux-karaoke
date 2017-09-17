@@ -46,7 +46,16 @@ expect(
   chorusArray: chorusArray,
   arrayPosition: 1,
   currentPhrase: chorusArray[1]
-})
+});
+
+expect(
+  reducer({
+    chorusString: chorus,
+    chorusArray: chorusArray,
+    arrayPosition: 1,
+    currentPhrase: chorusArray[1]
+  }, { type: 'RESTART_SONG' })
+).toEqual(initialState);
 
 const { createStore } = Redux;
 const store = createStore(reducer);
