@@ -2,6 +2,15 @@ const chorus = "Don't want to be a fool for you, Just another player in your gam
 
 const chorusArray = chorus.split(', ');
 
+const initialState = {
+  chorus: chorus,
+  chorusArray: chorusArray,
+  position: 0,
+  currentPhrase: chorusArray[0]
+}
+
+console.log(initialState);
+
 const userClick = () => {
   console.log('click');
 }
