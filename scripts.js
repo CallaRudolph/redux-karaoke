@@ -11,6 +11,16 @@ const initialState = {
 
 console.log(initialState);
 
+// REDUCER
+
+const { expect } = window;
+
+// UNIT TESTS
+
+const { createStore } = Redux;
+const store = createStore(reducer);
+console.log(store.getState());
+
 const userClick = () => {
   console.log('click');
 }
